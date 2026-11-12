@@ -1,6 +1,6 @@
 /** Public branding values are embedded by Vite at build time. Never put secrets here. */
 const value = (key: string, fallback = "") =>
-  String(import.meta.env[key] ?? fallback).trim();
+  String(import.meta.env?.[key] ?? fallback).trim();
 const webUrl = (key: string) => {
   const raw = value(key);
   try {

@@ -1,4 +1,6 @@
 {
+  "home.connectivityOnly": "No cross-origin readable egress endpoint is available. Only connectivity is checked; an unreadable IP does not mean the website is inaccessible.",
+  "home.ipv6ProbeUnavailable": "IPv6 probe unavailable",
   "home.routeInferenceNote": "Direct or proxy is judged against domestic-site exits on the same protocol; without a domestic IPv6 reference, operator and country are compared instead. Different exits may also come from multiple uplinks or NAT, so treat this as a hint.",
   "home.showsHttpResponseTimeProbeUnreachableMeansProbe": "Shows HTTP response time for this probe. Unreachable means this probe failed. Click a platform for details and its website.",
   "home.checkWebsiteConnectivityResponseLatencyAndActualEgress": "Check website connectivity, response latency and actual egress",

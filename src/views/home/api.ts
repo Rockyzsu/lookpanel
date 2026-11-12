@@ -146,6 +146,7 @@ export async function getDomesticIp(signal?: AbortSignal): Promise<Geo> {
   throw new Error(t("home.chinaEgressUnknownTargetSiteMayRestrictCross"));
 }
 export interface Site {
+  ipVersion?: number;
   nameKey?: string;
   note?: string;
   noteKey?: string;
@@ -185,8 +186,19 @@ export async function inspectSite(
     return { geo: await detectSite(site, signal), reachable: true };
   } catch (error) {
     if (signal?.aborted) throw error;
+    // Dedicated IPv6 probes have already tested the connection. Do not repeat
+    // the same failing request as a homepage reachability fallback.
+    if (site.ipVersion === 6) return { reachable: false };
     return { reachable: await probeSite(site, signal) };
   }
+}
+
+export function siteFailureLabel(site: Pick<Site, "ipVersion">) {
+  return t(
+    site.ipVersion === 6
+      ? "home.ipv6ProbeUnavailable"
+      : "home.websiteAccessBlockedLabel",
+  );
 }
 
 async function detectSite(site: Site, signal?: AbortSignal): Promise<Geo> {

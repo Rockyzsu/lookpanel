@@ -25,6 +25,7 @@
   },
   {
     "name": "ipify IPv6",
+    "ipVersion": 6,
     "type": "international",
     "method": "ip-json",
     "url": "https://api6.ipify.org?format=json",
@@ -32,6 +33,7 @@
   },
   {
     "name": "Cloudflare IPv6",
+    "ipVersion": 6,
     "type": "international",
     "method": "cftrace",
     "domain": "[2606:4700:4700::1111]",
@@ -207,7 +209,8 @@
   {
     "name": "1password.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "1password.com",
     "icon": "https://icons.duckduckgo.com/ip3/1password.com.ico",
     "extra": ["tools"]
@@ -327,7 +330,8 @@
   {
     "name": "bybit.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.bybit.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.bybit.com.ico",
     "extra": ["crypto"]
@@ -351,7 +355,8 @@
   {
     "name": "amazon.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.amazon.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.amazon.com.ico",
     "extra": ["ecommerce"]
@@ -359,7 +364,8 @@
   {
     "name": "ebay.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.ebay.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.ebay.com.ico",
     "extra": ["ecommerce"]
@@ -367,7 +373,8 @@
   {
     "name": "aliexpress.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.aliexpress.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.aliexpress.com.ico",
     "extra": ["ecommerce"]
@@ -383,7 +390,8 @@
   {
     "name": "shein.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.shein.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.shein.com.ico",
     "extra": ["ecommerce"]
@@ -391,7 +399,8 @@
   {
     "name": "etsy.com",
     "type": "international",
-    "method": "cftrace",
+    "method": "unsupported",
+    "noteKey": "home.connectivityOnly",
     "domain": "www.etsy.com",
     "icon": "https://icons.duckduckgo.com/ip3/www.etsy.com.ico",
     "extra": ["ecommerce"]

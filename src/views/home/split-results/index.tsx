@@ -13,7 +13,7 @@ import { sameIp } from "@/lib/ip-address";
 import { useQueries } from "@tanstack/react-query";
 import { type Row, SiteEgressTable } from "./site-egress-table";
 import { sites } from "./sites";
-import { getDomesticIp, getGeo, inspectSite } from "../api";
+import { getDomesticIp, getGeo, inspectSite, siteFailureLabel } from "../api";
 import { matchesSiteCategory } from "../category-status";
 import { ExitGroups, type SiteFilter } from "../exit-groups";
 
@@ -400,7 +400,7 @@ export function SplitResults({ summary = false }: { summary?: boolean }) {
               {detail.pending
                 ? t("common.checking")
                 : detail.reachable === false
-                  ? t("home.websiteAccessBlockedLabel")
+                  ? siteFailureLabel(detail)
                   : detail.geo
                     ? t("home.egressCollected")
                     : (detail.note ??

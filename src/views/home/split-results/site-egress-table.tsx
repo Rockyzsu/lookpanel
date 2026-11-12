@@ -20,7 +20,7 @@ import { t } from "@/i18n";
 import type { Geo } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { type Site } from "../api";
+import { type Site, siteFailureLabel } from "../api";
 import { type SiteFilter } from "../exit-groups";
 import { siteCategoryLabels } from "../site-categories";
 
@@ -173,7 +173,7 @@ export function SiteEgressTable({
                   const status = row.pending
                     ? t("common.checking")
                     : row.reachable === false
-                      ? t("home.websiteAccessBlockedLabel")
+                      ? siteFailureLabel(row)
                       : row.reachable === true
                         ? t("home.websiteReachable")
                         : t("home.waitingToCheck");
@@ -245,7 +245,7 @@ export function SiteEgressTable({
                           <Pending>{t("common.checking")}</Pending>
                         ) : row.reachable === false ? (
                           <span className="text-destructive">
-                            {t("home.websiteAccessBlockedLabel")}
+                            {siteFailureLabel(row)}
                           </span>
                         ) : row.reachable === true ? (
                           <span className="text-success">

@@ -1,4 +1,6 @@
 {
+  "home.connectivityOnly": "该站点未提供可跨域读取的出口接口，仅检测连通性；无法读取出口 IP 不代表网站无法访问。",
+  "home.ipv6ProbeUnavailable": "IPv6 检测不可用",
   "home.routeInferenceNote": "依据同协议的国内站点出口判断直连或代理；IPv6 缺少国内参考时按运营商与国家判断。出口不同也可能由多线路或 NAT 导致，仅供参考。",
   "home.showsHttpResponseTimeProbeUnreachableMeansProbe": "显示本次探测资源的 HTTP 响应耗时；未连通表示本次探测失败。点击平台可查看详情并打开官网。",
   "home.checkWebsiteConnectivityResponseLatencyAndActualEgress": "核对网站连通性、响应延迟和实际出口",

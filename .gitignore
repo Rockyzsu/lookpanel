@@ -1,0 +1,65 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+# This project uses pnpm; retain pnpm-lock.yaml as the canonical lockfile.
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+.pnpm-store/
+.npm/
+
+# Build output and tool caches
+dist
+dist-pages
+.output
+dist-ssr
+*.tsbuildinfo
+.vite/
+.cache/
+.eslintcache
+.stylelintcache
+.prettiercache
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+*.local
+.wrangler
+.dev.vars
+.dev.vars.*
+worker-configuration.d.ts
+.worker-test
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Deployment secrets (never commit)
+.secrets.*.env
+.env.docker
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# Local temporary and backup files
+*.tmp
+*.temp
+*.bak
+*~
